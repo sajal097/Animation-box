@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.magic{
+    background-color: #127369;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+border: 0;
+margin:10px;
+cursor: pointer;
+letter-spacing: 1px;
+box-shadow: 2px 4px 5px rgba(249, 202, 36, 0.6);
+z-index: 10;
+}
+
+.magic:active{
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+.boxes{
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 15px;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    transition: 0.5s ease-out;
+}
+.boxes.big{
+    width: 600px;
+    height: 600px;
+}
+.boxes.big .box{
+    transform: rotateZ(360deg);
+}
+
+.box{
+    background-image:url('samurai-champloo-mugen.gif');
+    background-repeat:no-repeat;
+background-size: 500px 500px;
+position: relative;
+
+transition: 0.5s ease-out;
+
+    width: 125px;
+    height: 125px;
+}
+.box::after{
+    content: '';
+    background-color: #A68877;
+    position: absolute;
+    top: 9px;
+    right: -15px;
+    height: 100%;
+    width: 15px;
+transform: skewY(45deg);
+}
+
+.box::before{
+    content: '';
+    background-color: #BFA18F;
+    position: absolute;
+    bottom: -15px;
+    left: 9px;
+    height: 15px;
+    width: 100%;
+    transform: skewX(45deg);
+}
+
+
+
+
+
+
